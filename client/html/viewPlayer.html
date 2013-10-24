@@ -1,0 +1,23 @@
+<template name="viewPlayer">
+  <h1>Player view</h1>
+  Turn Order #: {{this.player.number}}<br>
+  Row: {{this.player.row}}<br>
+  Column: {{this.player.col}}<br>
+
+  {{#if needToPickGuy}}
+    <h2>Choose your Character</h2>
+    <select id="character">
+        <option value="0"></option>
+      {{#each availableCharacter}}
+        <option value="{{number}}">{{name}}</option>
+      {{/each}}
+    </select>
+    <button id="pickGuy">Select</button>
+    {{#with selectedCharacter}}
+      <div id="characterInfo">
+        <p><strong>Name:</strong> {{name}}</p>
+        <p><strong>Bonus:</strong> {{bonus}}</p>
+      </div>
+    {{/with}}
+  {{/if}}
+</template>

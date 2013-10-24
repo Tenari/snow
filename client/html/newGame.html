@@ -1,0 +1,12 @@
+<template name="newGame">
+  How many players? (1-4)<br>
+  <input id="players" type="number"/><br>
+  <button id="makeGame">Start Game</button><br>
+  {{#if madeGame}}
+    Board: <a href="{{boardlink}}">{{boardlink}}</a><br>
+    {{#each players}}
+      Player:
+      <a href="{{this}}">{{this}}</a><br>
+    {{/each}}
+  {{/if}}
+</template>
