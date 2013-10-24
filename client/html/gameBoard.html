@@ -1,8 +1,8 @@
 <template name="gameBoard">
   {{#each entity}}
-    <div class="b-helper c-{{character}}" style="position:absolute;top:{{top}};left:{{left}}">{{number}}</div>
+    <div class="b-helper c-{{character}}" style="position:absolute;top:{{top}};left:{{left}}" data-_id="{{_id}}">{{number}}</div>
   {{/each}}
-  {{#each this.board}}
-    <div style="height:12px">{{#each this}}<div class="b-{{this}}"></div>{{/each}}</div>
-  {{/each}}
+  <div style="border: 1px solid black">
+    {{{boardHTML}}}
+  </div>
 </template>

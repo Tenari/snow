@@ -52,7 +52,8 @@ var makePlayers = function(numPlayers){
       col: (6+i),
       inventory: [],
       energy: 0,
-      character: 0
+      character: 0,
+      vision: 5
     });
     players.push(playerId);
   }
